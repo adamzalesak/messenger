@@ -48,3 +48,13 @@ export const loggedUserId = (userName: string): number => {
     ? 5
     : 0;
 };
+
+export const loggedUserName = (userId: number): string => {
+  return userId === 1
+    ? "Adam"
+    : userId === 2
+    ? "Anna"
+    : userId === 3
+    ? "Jakub"
+    : "Neznámý uživatel";
+};
