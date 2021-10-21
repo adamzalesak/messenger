@@ -33,7 +33,7 @@ export const users = [
   },
 ];
 
-export const apiUrl = "http://azmessenger-api.herokuapp.com";
+export const apiUrl = "https://azmessenger-api.herokuapp.com";
 
 export const loggedUserId = (userName: string): number => {
   return userName.startsWith("/adam")
