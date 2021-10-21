@@ -1,0 +1,50 @@
+.conversations-list-header {
+  display: none;
+  height: fit-content;
+  margin: 1.5rem 0 0.5rem 1rem;
+  overflow: hidden;
+
+  user-select: none;
+}
+.conversations-list-header__title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.conversations-list-header__title-text {
+  font-size: 1.5rem;
+}
+.conversations-list-header__title-number {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.2rem;
+
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-background-lighter);
+  
+  background: var(--color-warning);
+  border-radius: 50%;
+}
+.conversations-list-header__menu {
+  display: flex;
+  flex-direction: row;
+  margin: 1.5rem 0;
+}
+.conversations-list-header__menu-item {
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  
+  color: var(--color-primary);
+  font-weight: bold;
+  text-decoration: none;
+}
+.conversations-list-header__menu-item--active {
+  border-bottom: 3px solid var(--color-primary);
+}
+
+@media only screen and (min-width: 600px) {
+  .conversations-list-header {
+    display: block;
+  }
+}

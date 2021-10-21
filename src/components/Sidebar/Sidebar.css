@@ -1,0 +1,49 @@
+.sidebar {
+    grid-area: sidebar;
+
+    display: none;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    margin-right: 0;
+
+    color: var(--color-background-lighter);
+
+    background-color: var(--color-primary);
+    border-radius: 20px;
+}
+.sidebar__logo {
+    padding-bottom: 1.5rem;
+
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--color-background-lighter);
+    text-align: center;
+    
+    user-select: none;
+}
+
+.menu {
+    flex-direction: column;
+    align-items: center;
+
+    display: flex;
+    height: 100%;
+    padding-left: 0;
+
+    list-style-type: none;
+}
+.menu__item {
+    margin: 1rem 0;
+    text-align: center;
+}
+.menu__item--down {
+    display: block;
+    margin-top: auto;
+}
+
+@media only screen and (min-width: 600px) {
+    .sidebar {
+        display: flex;
+      }
+}

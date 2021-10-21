@@ -1,0 +1,12 @@
+.conversations-list {
+    grid-area: conversations-list;
+    
+    margin-bottom: 2rem;
+
+    overflow-y: scroll;
+    list-style: none;
+}
+
+@media only screen and (min-width: 600px) {
+
+}

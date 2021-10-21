@@ -1,0 +1,73 @@
+.conversation {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    margin: 1rem;
+    padding: 1rem;
+    gap: 1rem;
+
+    background-color: rgba(196, 196, 196, 0.2);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.conversation--active {
+    background-color: white;
+}
+.conversation__profile {
+    width: 2.5rem;
+
+    user-select: none;
+}
+.conversation__info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+    gap: 0.3rem;
+}
+.conversation__detail {
+    display: flex;
+}
+.conversation__name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    font-weight: bold;
+
+    user-select: none;
+}
+.conversation__time {
+    align-self: flex-start;
+
+    margin-left: auto;
+    padding-left: 0.5rem;
+    white-space: nowrap;
+
+    font-weight: 300;
+
+    user-select: none;
+}
+.conversation__from {
+    font-style: oblique;
+}
+.conversation__message {
+    white-space: nowrap;
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    user-select: none;
+}
+
+@media only screen and (min-width: 600px) {
+    .conversations-list__item {
+    margin: 0.2rem 0;
+
+    border-radius: 0;
+    }
+    .conversations-list__profile {
+        width: 3rem;
+    }
+}
+

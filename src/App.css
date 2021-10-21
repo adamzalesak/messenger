@@ -1,0 +1,234 @@
+:root {
+  --color-primary: #4849A1;
+  --color-secondary: #6D6DB4;
+  --color-background: #EEEEF6;
+  --color-background-lighter: #FFF;
+  --color-dark-grey: #EEEEF6;
+  --color-warning: #ED2460;
+}
+
+#root {
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+}
+
+body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--color-background);
+}
+
+.main {
+  display: grid;
+  min-height: -webkit-fill-available;
+  grid-template-columns: 100%;
+  grid-template-rows: 4rem 3rem calc(100% - 4rem - 3rem - 12rem) 12rem;
+  max-height: -webkit-fill-available;
+  grid-template-areas:
+      "main-header"
+      "conversation-title"
+      "messages"
+      "bottom-box";
+}
+
+.main--conversation-closed {
+  grid-template-rows: 4rem 3rem calc(100% - 4rem - 3rem - 9rem) 9rem;
+  grid-template-areas:
+    "main-header"
+    "conversations-list-title"
+    "conversations-list"
+    "bottom-box";
+}
+
+
+
+
+
+.button {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+}
+.button--send-image {
+  grid-area: send-image-button;
+}
+.button--send-file {
+  grid-area: send-file-button;
+}
+.button--contacts {
+  grid-area: contacts-button;
+}
+.button--dark-mode {
+  grid-area: dark-mode-button;
+}
+.button--message {
+  grid-area: message-button;
+
+  display: none;
+}
+.button--input-field {
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
+.button__icon {
+  width: 4rem;
+  margin: 0.3rem 0;
+
+  border: 0.15rem solid var(--color-primary);
+  border-radius: 50%;
+
+  user-select: none;
+}
+.button__icon--input-field {
+  width: 2.5rem;
+
+  border: none;
+  border-radius: 0;
+}
+.button__icon--close {
+  width: 3rem;
+}
+.button__description {
+  user-select: none;
+}
+
+
+
+.input-field {
+  width: 60%;
+  height: 3rem;
+  padding: 1rem;
+  padding-right: 3.5rem;
+
+  font-size: 1rem;
+  text-overflow: ellipsis;
+
+  border: 0.15rem solid var(--color-primary);
+  border-radius: 1.5rem
+}
+.input-field:focus {
+  outline: none;
+}
+.input-field--new-message {
+  width: 100%;
+}
+
+
+
+.main-header {
+  grid-area: main-header;
+
+  padding: 0 1rem;
+
+  background-color: var(--color-background-lighter);
+
+  user-select: none;
+}
+.main-header__title {
+  color: var(--color-primary);
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+
+.section-title {
+  padding: 0.3rem 1rem;
+
+  color: var(--color-primary);
+  font-size: 2rem;
+  font-weight: bold;
+
+  user-select: none;
+}
+.section-title--conversation {
+  grid-area: conversation-title;
+}
+.section-title--conversations-list {
+  grid-area: conversations-list-title;
+}
+
+
+
+
+@media only screen and (min-width: 600px) {
+  .main {
+    grid-template-columns: 6.5rem minmax(15rem, calc(25% - 6.5rem)) auto;
+    grid-template-rows: 4.5rem 3rem calc(100vh - 13.5rem) 6rem;
+    grid-template-areas:
+        "sidebar conversations-list-header search-bar"
+        "sidebar conversations-list-header messages"
+        "sidebar conversations-list        messages"
+        "sidebar conversations-list        bottom-box";
+  }
+
+  .main-header {
+    display: none;
+  }
+
+  .section-title {
+    display: none;
+  }
+
+  .sidebar {
+    display: flex;
+  }
+
+  
+  .conversations-list__item {
+    margin: 0.2rem 0;
+
+    border-radius: 0;
+  }
+  .conversations-list__profile {
+    width: 3rem;
+  }
+
+  .messages {
+    background: var(--color-background-lighter);
+  }
+
+
+  .button--close {
+    display: none;
+  }
+  .button--contacts {
+    display: none;
+  }
+  .button--dark-mode {
+    display: none;
+  }
+  .button__description {
+    display: none;
+  }
+
+  .button__icon {
+    width: 2.5rem;
+
+    border: none;
+  }
+  .button__icon--sidebar {
+    width: 2.5rem;
+
+    border-radius: 0;
+  }
+
+  .input-field {
+    border: 0.15rem solid var(--color-background);
+  }
+}

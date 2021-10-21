@@ -1,0 +1,25 @@
+.messages {
+    grid-area: messages;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow-y: scroll;
+}
+.messages__content-containter {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0;
+}
+.messages__author-name {
+    padding: 0 1rem 0.5rem;
+}
+.messages__content {
+    width: fit-content;
+    max-width: 75%;
+    padding: 1rem;
+    margin: 0 1rem 0.5rem 1rem;
+    background-color: rgba(196, 196, 196, 0.2);
+    border-radius: 20px;
+}
+.messages__content--from-me {
+    margin-left: auto;
+}
